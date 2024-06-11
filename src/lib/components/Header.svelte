@@ -32,7 +32,9 @@
 		<button class="hamburger" on:click={toggleMenu}>
 			<i class="fa-solid fa-bars"></i>
 		</button>
-		<img class="logo" src={logo} alt="logo" width="200" height="200" />
+		<a href="/">
+			<img class="logo" src={logo} alt="logo" width="200" height="200" />
+		</a>
 		<button class="cart-btn">
 			<i class="fa-solid fa-cart-shopping"></i>
 		</button>

@@ -1,4 +1,7 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+
 	export let title = 'AK Boutique - Sklep Online | Odkryj Najnowsze Trendy';
 	export let description =
 		'Odkryj najnowsze trendy w czołowym miejscu mody w Polsce! Zakupy online kolekcji stylowych ubrań i akcesoriów na każdą okazję. Podnieś swoją garderobę dzięki modnym i wysokiej jakości produktom. Szybka wysyłka w całej Polsce. Kup teraz i wyraź swój unikatowy styl!';
@@ -14,8 +17,9 @@
 	/>
 	<title>{title}</title>
 </svelte:head>
-
+<Header />
 <slot />
+<Footer />
 
 <style>
 	@import '$lib/styles/global.css';
