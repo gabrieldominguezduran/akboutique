@@ -1,0 +1,76 @@
+<script>
+	export let name;
+	export let price;
+	export let image;
+
+	let imageUrl = `/images/${image}`;
+</script>
+
+<article class="product-card">
+	<div class="image-wrapper">
+		<img src={imageUrl} alt={name} view-transition-name={`image-${image}`} />
+	</div>
+	<div class="product-info">
+		<h2>{name}</h2>
+		<span>Price: {price} zl</span>
+	</div>
+</article>
+
+<style>
+	.product-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		padding: 1rem;
+		margin-bottom: 1rem;
+		cursor: pointer;
+		border: 0.5px solid var(--main-pink);
+		border-radius: 10px;
+	}
+
+	.image-wrapper {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-height: 30rem;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+	}
+
+	.product-info {
+		padding: 0.5rem;
+		text-align: center;
+		background-color: var(--main-pink);
+		color: var(--main-dark);
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.product-info h2 {
+		margin: 0.5rem 0;
+		font-size: 1rem;
+	}
+
+	.product-info span {
+		font-size: 0.8rem;
+		font-weight: bold;
+		color: var(--main-dark);
+	}
+
+	@media (max-width: 450px) {
+		.product-info {
+			flex-direction: column;
+		}
+	}
+</style>

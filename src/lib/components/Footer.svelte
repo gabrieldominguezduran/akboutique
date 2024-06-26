@@ -11,10 +11,12 @@
 			<h3>Follow Us</h3>
 
 			<div class="social-icons">
-				<a href="facebook.com"><i class="fa-brands fa-facebook"></i></a>
-				<a href="instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
-				<a href="twitter.com"><i class="fa-brands fa-square-twitter"></i></a>
-				<a href="youtube.com"><i class="fa-brands fa-square-youtube"></i></a>
+				<a href="https://www.facebook.com/profile.php?id=61559524062890" target="_blank"
+					><i class="fa-brands fa-facebook"></i></a
+				>
+				<a href="https://www.instagram.com/akboutique.pl/" target="_blank"
+					><i class="fa-brands fa-square-instagram"></i></a
+				>
 			</div>
 		</div>
 	</div>

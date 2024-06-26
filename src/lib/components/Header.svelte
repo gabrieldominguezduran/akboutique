@@ -51,10 +51,12 @@
 				<a href="/">Home</a>
 			</div>
 			<div class="social-icons">
-				<a href="facebook"><i class="fa-brands fa-facebook"></i></a>
-				<a href="imstagram"><i class="fa-brands fa-square-instagram"></i></a>
-				<a href="twitter"><i class="fa-brands fa-square-twitter"></i></a>
-				<a href="youtube"><i class="fa-brands fa-square-youtube"></i></a>
+				<a href="https://www.facebook.com/profile.php?id=61559524062890" target="_blank"
+					><i class="fa-brands fa-facebook"></i></a
+				>
+				<a href="https://www.instagram.com/akboutique.pl/" target="_blank"
+					><i class="fa-brands fa-square-instagram"></i></a
+				>
 			</div>
 		</div>
 	</nav>
@@ -118,20 +120,6 @@
 		align-self: flex-end;
 	}
 
-	.menu-links a,
-	.social-icons a {
-		display: block;
-		color: var(--main-dark);
-		text-decoration: none;
-		font-size: 1.2rem;
-		margin-bottom: 1rem;
-	}
-
-	.menu-links a:hover,
-	.social-icons a:hover {
-		color: var(--main-white);
-	}
-
 	.menu-links {
 		flex: 1;
 		margin-top: 5rem;
@@ -139,6 +127,21 @@
 
 	.social-icons {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
+	}
+
+	.menu-links a,
+	.social-icons a {
+		display: block;
+		color: var(--main-dark);
+		text-decoration: none;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		margin-right: 1rem;
+	}
+
+	.menu-links a:hover,
+	.social-icons a:hover {
+		color: var(--main-white);
 	}
 </style>
