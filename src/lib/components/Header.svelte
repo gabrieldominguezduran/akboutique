@@ -113,6 +113,10 @@
 
 	.cart-btn {
 		color: var(--main-dark);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
 	}
 
 	.cart-btn .cart-count {
