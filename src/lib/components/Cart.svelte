@@ -5,16 +5,18 @@
 	let isCartOpenValue;
 	let cartItemsValue = [];
 
-	$: isCartOpen.subscribe((value) => {
-		isCartOpenValue = value;
-		if (isCartOpenValue) {
-			document.body.classList.add('cart-open');
-		} else {
-			document.body.classList.remove('cart-open');
-		}
-	});
+	if (typeof document !== 'undefined') {
+		isCartOpen.subscribe((value) => {
+			isCartOpenValue = value;
+			if (isCartOpenValue) {
+				document.body.classList.add('cart-open');
+			} else {
+				document.body.classList.remove('cart-open');
+			}
+		});
+	}
 
-	$: cartItems.subscribe((value) => {
+	cartItems.subscribe((value) => {
 		cartItemsValue = Object.values(value);
 	});
 
