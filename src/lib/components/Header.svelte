@@ -117,6 +117,7 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		max-width: fit-content;
 	}
 
 	.cart-btn .cart-count {
