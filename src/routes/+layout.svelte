@@ -5,6 +5,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Banner from '$lib/components/Banner.svelte';
+	import Cart from '../lib/components/Cart.svelte';
 
 	export let title = 'AK Boutique - Sklep Online | Odkryj Najnowsze Trendy';
 	export let description =
@@ -39,6 +40,7 @@
 	<Banner />
 {/if}
 <slot />
+<Cart />
 <Footer />
 
 <style>

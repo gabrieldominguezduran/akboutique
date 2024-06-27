@@ -1,8 +1,15 @@
 <script>
 	import logo from '$lib/assets/images/logo_white.png';
 	import { onMount } from 'svelte';
+	import { isCartOpen, cartItems } from '$lib/stores/cart';
 
 	let isMenuOpen = false;
+	let cartItemsValue = [];
+	let totalItems = 0;
+
+	function handleCartToggle() {
+		isCartOpen.update((value) => !value);
+	}
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -12,12 +19,16 @@
 		isMenuOpen = false;
 	}
 
-	// Optional: Close menu when clicking outside
 	function handleOutsideClick(event) {
 		if (isMenuOpen && !event.target.closest('.menu') && !event.target.closest('.hamburger')) {
 			closeMenu();
 		}
 	}
+
+	cartItems.subscribe((items) => {
+		cartItemsValue = Object.values(items);
+		totalItems = cartItemsValue.reduce((sum, item) => sum + item.quantity, 0);
+	});
 
 	onMount(() => {
 		document.addEventListener('click', handleOutsideClick);
@@ -35,9 +46,14 @@
 		<a href="/">
 			<img class="logo" src={logo} alt="logo" width="200" height="200" />
 		</a>
-		<button class="cart-btn">
-			<i class="fa-solid fa-cart-shopping"></i>
-		</button>
+		<div class="cart-container">
+			<button class="cart-btn" on:click={handleCartToggle}>
+				<i class="fa-solid fa-bag-shopping"></i>
+				{#if totalItems > 0}
+					<span class="cart-count">{totalItems}</span>
+				{/if}
+			</button>
+		</div>
 	</div>
 
 	<nav class="menu" class:isMenuOpen>
@@ -51,12 +67,12 @@
 				<a href="/">Home</a>
 			</div>
 			<div class="social-icons">
-				<a href="https://www.facebook.com/profile.php?id=61559524062890" target="_blank"
-					><i class="fa-brands fa-facebook"></i></a
-				>
-				<a href="https://www.instagram.com/akboutique.pl/" target="_blank"
-					><i class="fa-brands fa-square-instagram"></i></a
-				>
+				<a href="https://www.facebook.com/profile.php?id=61559524062890" target="_blank">
+					<i class="fa-brands fa-facebook"></i>
+				</a>
+				<a href="https://www.instagram.com/akboutique.pl/" target="_blank">
+					<i class="fa-brands fa-square-instagram"></i>
+				</a>
 			</div>
 		</div>
 	</nav>
@@ -76,7 +92,6 @@
 	}
 
 	.logo {
-		margin-left: 2rem;
 		mix-blend-mode: multiply;
 	}
 
@@ -89,6 +104,30 @@
 		color: var(--main-dark);
 		font-size: 1.5rem;
 		place-self: auto;
+		position: relative;
+	}
+
+	.cart-container {
+		position: relative;
+	}
+
+	.cart-btn {
+		color: var(--main-dark);
+	}
+
+	.cart-btn .cart-count {
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		background-color: gray;
+		color: white;
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.8rem;
 	}
 
 	.menu {

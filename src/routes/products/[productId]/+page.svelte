@@ -1,13 +1,23 @@
 <script>
+	import { addCartItem } from '$lib/stores/cart';
+
 	export let data;
 	const { product } = data;
-	// import AddToCartForm from '$lib/components/cart/AddToCartButton.svelte';
-	// import QuantityButton from '$lib/components/cart/QuantityButton.svelte';
 
 	let imageUrl = '';
 
 	$: if (product) {
 		imageUrl = `/images/${product.image}`;
+	}
+
+	function handleAddToCart() {
+		addCartItem({
+			id: product.id,
+			name: product.name,
+			price: product.price,
+			quantity: 1,
+			image_public: imageUrl
+		});
 	}
 </script>
 
@@ -26,18 +36,12 @@
 				</div>
 				<div class="price-and-cart">
 					<div class="qty-price">
-						<!-- <QuantityButton
-            initialQuantity={1}
-            maxQuantity={product.stock_quantity}
-            itemId={product.id}
-            itemDetails={product}
-          /> -->
 						<span class="product-price">Price: {product.price} zl</span>
 					</div>
 					<div class="buttons">
-						<!-- <AddToCartForm item={product}>
-            <button type="submit" class="add-to-cart-btn" id="add-to-cart-btn">Add to Cart</button>
-          </AddToCartForm> -->
+						<button class="buy-btn" on:click={handleAddToCart}>
+							Add to <span><i class="fa-solid fa-bag-shopping"></i></span></button
+						>
 						<button class="buy-btn">Buy <span><i class="fa-regular fa-heart"></i></span></button>
 					</div>
 				</div>
