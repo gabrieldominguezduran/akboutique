@@ -26,7 +26,7 @@
 	.footer {
 		background-color: var(--main-dark);
 		color: var(--main-white);
-		padding: 1rem 0;
+		padding-top: 1rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -1,5 +1,9 @@
+<script>
+	export let title;
+</script>
+
 <div class="text">
-	<p>New Collection</p>
+	<p>{title}</p>
 </div>
 
 <style>

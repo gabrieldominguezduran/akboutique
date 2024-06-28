@@ -62,9 +62,16 @@
 				<i class="fa-solid fa-times"></i>
 			</button>
 			<div class="menu-links">
-				<a href="/bestseller">Bestseller</a>
-				<a href="/sales">Sales</a>
-				<a href="/">Home</a>
+				<div class="menu-primary">
+					<a class="home-link" href="/">Home</a>
+					<a href="/t-shirts">T-shirts</a>
+					<a href="/pants">Pants</a>
+					<a href="/jerseys">Jerseys</a>
+				</div>
+				<div class="menu-secondary">
+					<a href="/bestseller">Bestseller</a>
+					<a href="/sales">Sales</a>
+				</div>
 			</div>
 			<div class="social-icons">
 				<a href="https://www.facebook.com/profile.php?id=61559524062890" target="_blank">
@@ -164,9 +171,20 @@
 		align-self: flex-end;
 	}
 
+	.home-link {
+		margin-top: 2rem;
+		margin-bottom: 5rem;
+	}
+
 	.menu-links {
 		flex: 1;
-		margin-top: 5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.menu-secondary {
+		margin-bottom: 2rem;
 	}
 
 	.social-icons {
@@ -180,7 +198,6 @@
 		color: var(--main-dark);
 		text-decoration: none;
 		font-size: 1.5rem;
-		margin-bottom: 1rem;
 		margin-right: 1rem;
 	}
 

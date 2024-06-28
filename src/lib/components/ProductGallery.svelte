@@ -1,12 +1,12 @@
 <script>
 	import ProductCard from '$lib/components/ProductCard.svelte';
-	import products from '$lib/data/products.json';
+	export let products = [];
 </script>
 
 <div class="gallery">
 	{#each products as product}
 		<div class="product-card">
-			<a href={`/products/${product.id}`}>
+			<a href={`/${product.category}/${product.id}`}>
 				<ProductCard name={product.name} price={product.price} image={product.image} />
 			</a>
 		</div>

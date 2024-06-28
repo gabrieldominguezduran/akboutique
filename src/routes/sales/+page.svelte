@@ -1,42 +1,12 @@
+<script>
+	import Banner from '$lib/components/Banner.svelte';
+	import ProductGallery from '$lib/components/ProductGallery.svelte';
+
+	export let data;
+	let products = data.products;
+</script>
+
 <main>
-	<h1>Sales</h1>
-	<a class="btn-home" href="/">Home</a>
+	<Banner title="Sales" />
+	<ProductGallery {products} />
 </main>
-
-<style>
-	main {
-		min-width: 80vw;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	h1 {
-		font-size: 10rem;
-	}
-
-	.btn-home {
-		font-size: 2rem;
-		color: inherit;
-		text-decoration: none;
-		margin-top: 1rem;
-	}
-
-	.btn-home:hover {
-		color: var(--main-pink);
-	}
-	.btn-home:focus,
-	.btn-home:visited,
-	.btn-home:active {
-		text-decoration: none;
-	}
-
-	@media (max-width: 1050px) {
-		main {
-			min-width: 100vw;
-		}
-		h1 {
-			font-size: 5rem;
-		}
-	}
-</style>

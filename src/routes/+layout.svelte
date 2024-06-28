@@ -37,7 +37,7 @@
 </svelte:head>
 <Header />
 {#if $isHomePage}
-	<Banner />
+	<Banner title="New Collection" />
 {/if}
 <slot />
 <Cart />
