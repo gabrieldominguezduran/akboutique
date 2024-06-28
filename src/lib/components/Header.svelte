@@ -64,9 +64,9 @@
 			<div class="menu-links">
 				<div class="menu-primary">
 					<a class="home-link" href="/">Home</a>
-					<a href="/t-shirts">T-shirts</a>
-					<a href="/pants">Pants</a>
-					<a href="/jerseys">Jerseys</a>
+					<a href="/kombinezony">Kombinezony</a>
+					<a href="/komplety">Komplety</a>
+					<a href="/bluzki">Bluzki</a>
 				</div>
 				<div class="menu-secondary">
 					<a href="/bestseller">Bestseller</a>

@@ -7,7 +7,11 @@
 	{#each products as product}
 		<div class="product-card">
 			<a href={`/${product.category}/${product.id}`}>
-				<ProductCard name={product.name} price={product.price} image={product.image} />
+				<ProductCard
+					name={product.name}
+					price={product.price}
+					image={`${String(product.id)}.webp`}
+				/>
 			</a>
 		</div>
 	{/each}

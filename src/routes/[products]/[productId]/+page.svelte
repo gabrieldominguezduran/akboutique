@@ -7,7 +7,7 @@
 	let imageUrl = '';
 
 	$: if (product) {
-		imageUrl = `/images/${product.image}`;
+		imageUrl = `/images/${String(product.id)}.webp`;
 	}
 
 	function handleAddToCart() {
@@ -16,7 +16,7 @@
 			name: product.name,
 			price: product.price,
 			quantity: 1,
-			image_public: imageUrl
+			image: imageUrl
 		});
 	}
 </script>

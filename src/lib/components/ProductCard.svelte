@@ -12,7 +12,7 @@
 	</div>
 	<div class="product-info">
 		<h2>{name}</h2>
-		<span>Price: {price} zl</span>
+		<span>{price} zl</span>
 	</div>
 </article>
 
