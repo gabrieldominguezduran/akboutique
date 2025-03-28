@@ -1,5 +1,5 @@
 <script>
-	export let title = 'AK Boutique - Sklep Online | Odkryj Najnowsze Trendy';
+	export let title = 'Solo collection - Sklep Online | Odkryj Najnowsze Trendy';
 	export let description =
 		'Odkryj najnowsze trendy w czołowym miejscu mody w Polsce! Zakupy online kolekcji stylowych ubrań i akcesoriów na każdą okazję. Podnieś swoją garderobę dzięki modnym i wysokiej jakości produktom. Szybka wysyłka w całej Polsce. Kup teraz i wyraź swój unikatowy styl!';
 </script>
