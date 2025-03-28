@@ -14,7 +14,7 @@
 				<a href="https://www.facebook.com/profile.php?id=61559524062890" target="_blank"
 					><i class="fa-brands fa-facebook"></i></a
 				>
-				<a href="https://www.instagram.com/akboutique.pl/" target="_blank"
+				<a href="https://www.instagram.com/solocollection.pl/" target="_blank"
 					><i class="fa-brands fa-square-instagram"></i></a
 				>
 			</div>
