@@ -67,7 +67,7 @@
 			font-size: 5rem;
 		}
 		.instagram {
-			margin-bottom: 25%;
+			margin-bottom: 15%;
 		}
 	}
 
