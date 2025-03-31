@@ -64,7 +64,8 @@
 			width: 100%;
 		}
 		p {
-			font-size: 5rem;
+			font-size: 4rem;
+			margin-top: 1rem;
 		}
 		.instagram {
 			margin-bottom: 15%;
