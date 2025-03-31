@@ -4,6 +4,11 @@
 
 <section class="container">
 	<img src={pinkLogo} alt="Pink logo" />
+	<div class="instagram">
+		<a href="https://www.instagram.com/solocollection.pl/" target="_blank"
+			><i class="fa-brands fa-square-instagram"></i></a
+		>
+	</div>
 	<p>Coming soon...</p>
 	<div class="air air1"></div>
 	<div class="air air2"></div>
@@ -27,6 +32,19 @@
 		margin-top: -10rem;
 	}
 
+	.instagram {
+		align-self: center;
+		margin-top: -14%;
+		margin-bottom: 10%;
+		z-index: 1000;
+	}
+
+	.instagram a {
+		margin: 0 0.5rem;
+		font-size: 2rem;
+		color: var(--main-dark);
+	}
+
 	@font-face {
 		font-family: 'Great Vibes';
 		src: url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -47,6 +65,9 @@
 		}
 		p {
 			font-size: 5rem;
+		}
+		.instagram {
+			margin-bottom: 25%;
 		}
 	}
 
