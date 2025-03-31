@@ -68,7 +68,7 @@
 			margin-top: 1rem;
 		}
 		.instagram {
-			margin-bottom: 15%;
+			margin-bottom: 5%;
 		}
 	}
 
